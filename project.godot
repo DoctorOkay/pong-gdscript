@@ -1,0 +1,57 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Paddle",
+"class": "AiPaddle",
+"language": "GDScript",
+"path": "res://ai_paddle.gd"
+}, {
+"base": "Node2D",
+"class": "Ball",
+"language": "GDScript",
+"path": "res://ball.gd"
+}, {
+"base": "Resource",
+"class": "Collision",
+"language": "GDScript",
+"path": "res://collision.gd"
+}, {
+"base": "Node2D",
+"class": "Paddle",
+"language": "GDScript",
+"path": "res://paddle.gd"
+} ]
+_global_script_class_icons={
+"AiPaddle": "",
+"Ball": "",
+"Collision": "",
+"Paddle": ""
+}
+
+[application]
+
+config/name="Pong Gdscript"
+run/main_scene="res://game.tscn"
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+environment/default_environment="res://default_env.tres"
+quality/dynamic_fonts/use_oversampling=false
